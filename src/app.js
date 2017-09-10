@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
-import {Text, View } from 'react-native';
+import { View } from 'react-native';
 import firebase from 'firebase';
 import { Header } from './components/common';
+import LoginForm from './components/LoginForm';
 
 class App extends Component {
+
   componentWillMount() {
     firebase.initializeApp({
       apiKey: "AIzaSyBGltpKYhHXsRNFTHM_I8Zl1ON34oYS3ZI",
@@ -14,11 +16,12 @@ class App extends Component {
       messagingSenderId: "803019534852"
     });
   }
+
   render(){
     return (
       <View>
         <Header  headerText="Authentication"/>
-          <Text> App </Text>
+          <LoginForm />
       </View>
       );
   }
